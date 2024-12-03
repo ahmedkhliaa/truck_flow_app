@@ -1,0 +1,32 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+
+# VS Code settings
+.vscode/
+
+# Environment variables
+.env
+
+# macOS specific
+.DS_Store
+
+# Streamlit specific
+.streamlit/
+*.log
+
+.python-version
+
+.pytest_cache/
+
+
+tests/__pycache__/
+tests/*.tmp
+
+*.csv
