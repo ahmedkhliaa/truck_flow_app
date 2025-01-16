@@ -15,21 +15,18 @@ def prepare_route_for_view(selected_journey, edges_with_coordinates):
     if selected_journey.empty:
         raise ValueError("No journey data found. Please check the input and try again.")    
 
-    # Extract the first row from the DataFrame (assuming a single-row DataFrame)
-    journey_row = selected_journey.iloc[0]
-
     # Extract necessary columns from the journey row
     origin_coordinates = (
-        journey_row["Geometric_center_Y_origin"],  # Latitude
-        journey_row["Geometric_center_X_origin"],  # Longitude
+        selected_journey["Geometric_center_Y_origin"],  # Latitude
+        selected_journey["Geometric_center_X_origin"],  # Longitude
     )
     destination_coordinates = (
-        journey_row["Geometric_center_Y_destination"],  # Latitude
-        journey_row["Geometric_center_X_destination"],  # Longitude
+        selected_journey["Geometric_center_Y_destination"],  # Latitude
+        selected_journey["Geometric_center_X_destination"],  # Longitude
     )
 
     # Extract Edge_path_E_road and convert to a list of node IDs
-    edge_path = eval(journey_row["Edge_path_E_road"])  # Convert string to list if needed
+    edge_path = eval(selected_journey["Edge_path_E_road"])  # Convert string to list if needed
 
     # Filter edges for the path
     filtered_edges = filter_edges_by_path(edge_path, edges_with_coordinates)
