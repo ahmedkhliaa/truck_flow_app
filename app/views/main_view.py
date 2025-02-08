@@ -42,10 +42,12 @@ def render_app():
 
             # Select specific journeys
             selected_journeys = select_journeys(origin_regions, destination_regions, filtered_journeys)
-            st.write("Selected Journeys:", selected_journeys)
+            st.write("Selected Journey:", selected_journeys)
 
             # Prepare routes for visualization
             route_data = prepare_routes(selected_journeys, edges_with_coordinates)
+            st.write(f"The route to be displayed:",route_data)
+
 
             # Display routes on the map
             display_routes(route_data, selected_year)

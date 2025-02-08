@@ -18,11 +18,9 @@ def filter_edges_by_path(edge_path, edges_with_coordinates):
 
     # Filter edges where both nodes (A and B) exist in the edge path
     filtered_edges = edges_with_coordinates[
-        (edges_with_coordinates["Network_Node_A_ID"].isin(edge_path)) &
-        (edges_with_coordinates["Network_Node_B_ID"].isin(edge_path))
-    ]
+        (edges_with_coordinates["Network_Edge_ID"].isin(edge_path))]
 
     # Ensure the edges are in the correct order along the path
-    filtered_edges = filtered_edges.sort_values(by=["Network_Node_A_ID", "Network_Node_B_ID"])
+    #filtered_edges = filtered_edges.sort_values(by=["Network_Node_A_ID", "Network_Node_B_ID"])
 
     return filtered_edges
