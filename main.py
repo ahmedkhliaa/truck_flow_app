@@ -2,6 +2,7 @@ from app.views.main_view import render_app
 from app.models.data_loader import load_all_data
 from app.models.data_transformation import preprocess_truck_traffic_with_regions, preprocess_edges_with_coordinates
 
+
 def main():
     
     # Load all data and cache it
