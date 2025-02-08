@@ -80,7 +80,7 @@ def preprocess_edges_with_coordinates():
         _cached_transformed_data["edges_with_coordinates"] = edges_with_coordinates
         print("Network edges preprocessing completed.")
         # save only the head of the edges_with_coordinates to a CSV file
-        edges_with_coordinates.head().to_csv("edges_with_coordinates.csv", index=False)
+        #edges_with_coordinates.head().to_csv("edges_with_coordinates.csv", index=False)
 
     return _cached_transformed_data["edges_with_coordinates"]
 
