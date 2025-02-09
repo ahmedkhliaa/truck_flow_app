@@ -14,18 +14,6 @@ The app enables users to:
 - **Select specific routes** to analyze detailed itineraries.
 - **View freight volume information**, aiding in the investigation of transport flow trends.
 
-## 🚀 Features
-- **Interactive Filters:** Customize your data view by selecting origin and destination countries.
-- **Journey Itineraries:** Visualize detailed paths of specific journeys.
-- **Freight Volume Insights:** Access comprehensive information on freight volumes for selected routes.
-
-## 🔍 Use Case
-This app is particularly useful for:
-
-- Researchers and analysts studying **European road freight transport**.
-- Professionals involved in **logistics planning** and **transport flow optimization**.
-- Policy makers needing **data-driven insights** for infrastructure decisions.
-
 ## ⚡ Getting Started
 1. Clone this repository.
 2. Download the data from the [link](https://www.sciencedirect.com/science/article/pii/S235234092101060X?via%3Dihub) and place it in the `data` folder.
