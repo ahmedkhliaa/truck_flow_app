@@ -1,6 +1,5 @@
-#from app.controllers.country_controller import translate_country_name_to_code
 from app.controllers.country_controller import translate_multiple_countries
-from app.models.data_loader import get_data
+from app.models.data_loader import load_country_mapping
 
 def handle_user_input(origin_countries, destination_countries):
     """
@@ -12,7 +11,7 @@ def handle_user_input(origin_countries, destination_countries):
         tuple: Two lists of country codes for origin and destination countries.
     """
     # Load the country mapping
-    mapping = get_data("country_mapping")
+    mapping = load_country_mapping()
 
     # Translate the input countries to codes
     #origin_codes = translate_country_name_to_code(origin_countries, mapping)

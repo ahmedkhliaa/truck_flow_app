@@ -1,6 +1,6 @@
 import pandas as pd
 from app.controllers.prepare_routes_for_view import prepare_route_for_view
-import streamlit as st
+
 
 def prepare_routes(selected_journeys, edges_with_coordinates):
     """
@@ -22,9 +22,9 @@ def prepare_routes(selected_journeys, edges_with_coordinates):
             "Start Coordinates": route_coordinates[0],
             "End Coordinates": route_coordinates[-1],
             "Route Coordinates": route_coordinates[1],
-            "Traffic Flow (2010)": journey["Traffic_flow_trucks_2010"],
-            "Traffic Flow (2019)": journey["Traffic_flow_trucks_2019"],
-            "Traffic Flow (2030)": journey["Traffic_flow_trucks_2030"],
+            "Traffic Flow (2010)": journey["traffic_flow_trucks_2010"],
+            "Traffic Flow (2019)": journey["traffic_flow_trucks_2019"],
+            "Traffic Flow (2030)": journey["traffic_flow_trucks_2030"],
         })
 
     return pd.DataFrame(all_routes)

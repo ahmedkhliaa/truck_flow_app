@@ -1,4 +1,3 @@
-from app.models.data_transformation import preprocess_edges_with_coordinates
 
 def filter_edges_by_path(edge_path, edges_with_coordinates):
     """
@@ -12,13 +11,9 @@ def filter_edges_by_path(edge_path, edges_with_coordinates):
     Returns:
         DataFrame: Filtered edges with their coordinates for the specified route.
     """
-    if edges_with_coordinates is None:
-        # Ensure edges_with_coordinates is preprocessed
-        edges_with_coordinates = preprocess_edges_with_coordinates()
-
     # Filter edges where both nodes (A and B) exist in the edge path
     filtered_edges = edges_with_coordinates[
-        (edges_with_coordinates["Network_Edge_ID"].isin(edge_path))]
+        (edges_with_coordinates["network_edge_id"].isin(edge_path))]
 
     # Ensure the edges are in the correct order along the path
     #filtered_edges = filtered_edges.sort_values(by=["Network_Node_A_ID", "Network_Node_B_ID"])
