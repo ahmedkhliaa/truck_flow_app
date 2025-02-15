@@ -16,9 +16,10 @@ RUN apt-get update && apt-get install -y \
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-# Expose the port used by Streamlit
-EXPOSE 8501
+# ✅ Change exposed port to 8080 (Cloud Run requirement)
+EXPOSE 8080
 
-# Run the app
-CMD ["streamlit", "run", "main.py", "--server.port=8501", "--server.address=0.0.0.0"]
+# ✅ Change Streamlit to listen on port 8080 (Cloud Run talks only to 8080)
+CMD ["streamlit", "run", "main.py", "--server.port=8080", "--server.address=0.0.0.0"]
+
 
