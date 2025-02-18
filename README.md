@@ -12,4 +12,7 @@ The data is from the following publication:
 ## ⚙️ Tech Stack
 The app uses **PostgreSQL** for data storage and **Streamlit** for the user interface and data processing.
 
+## 🚀 CI/CD Pipeline
+This project includes a CI/CD pipeline using GitHub Actions to deploy the app to Google Cloud Run.
+
 
